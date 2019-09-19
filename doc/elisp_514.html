@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<!-- This HTML file has been created by texi2html 1.52
+     from ../texi/elisp.texi on 7 November 1998 -->
+
+<TITLE>GNU Emacs Lisp Reference Manual - Saving Properties</TITLE>
+</HEAD>
+<BODY>
+Go to the <A HREF="elisp_1.html">first</A>, <A HREF="elisp_513.html">previous</A>, <A HREF="elisp_515.html">next</A>, <A HREF="elisp_672.html">last</A> section, <A HREF="elisp_toc.html">table of contents</A>.
+<P><HR><P>
+
+
+<H3><A NAME="SEC517" HREF="elisp_toc.html#TOC517">Saving Text Properties in Files</A></H3>
+<P>
+<A NAME="IDX2206"></A>
+<A NAME="IDX2207"></A>
+
+</P>
+<P>
+  You can save text properties in files (along with the text itself),
+and restore the same text properties when visiting or inserting the
+files, using these two hooks:
+
+</P>
+<P>
+<DL>
+<DT><U>Variable:</U> <B>write-region-annotate-functions</B>
+<DD><A NAME="IDX2208"></A>
+This variable's value is a list of functions for <CODE>write-region</CODE> to
+run to encode text properties in some fashion as annotations to the text
+being written in the file.  See section <A HREF="elisp_370.html#SEC373">Writing to Files</A>.
+
+</P>
+<P>
+Each function in the list is called with two arguments: the start and
+end of the region to be written.  These functions should not alter the
+contents of the buffer.  Instead, they should return lists indicating
+annotations to write in the file in addition to the text in the
+buffer.
+
+</P>
+<P>
+Each function should return a list of elements of the form
+<CODE>(<VAR>position</VAR> . <VAR>string</VAR>)</CODE>, where <VAR>position</VAR> is an
+integer specifying the relative position within the text to be written,
+and <VAR>string</VAR> is the annotation to add there.
+
+</P>
+<P>
+Each list returned by one of these functions must be already sorted in
+increasing order by <VAR>position</VAR>.  If there is more than one function,
+<CODE>write-region</CODE> merges the lists destructively into one sorted list.
+
+</P>
+<P>
+When <CODE>write-region</CODE> actually writes the text from the buffer to the
+file, it intermixes the specified annotations at the corresponding
+positions.  All this takes place without modifying the buffer.
+</DL>
+
+</P>
+<P>
+<DL>
+<DT><U>Variable:</U> <B>after-insert-file-functions</B>
+<DD><A NAME="IDX2209"></A>
+This variable holds a list of functions for <CODE>insert-file-contents</CODE>
+to call after inserting a file's contents.  These functions should scan
+the inserted text for annotations, and convert them to the text
+properties they stand for.
+
+</P>
+<P>
+Each function receives one argument, the length of the inserted text;
+point indicates the start of that text.  The function should scan that
+text for annotations, delete them, and create the text properties that
+the annotations specify.  The function should return the updated length
+of the inserted text, as it stands after those changes.  The value
+returned by one function becomes the argument to the next function.
+
+</P>
+<P>
+These functions should always return with point at the beginning of
+the inserted text.
+
+</P>
+<P>
+The intended use of <CODE>after-insert-file-functions</CODE> is for converting
+some sort of textual annotations into actual text properties.  But other
+uses may be possible.
+</DL>
+
+</P>
+<P>
+We invite users to write Lisp programs to store and retrieve text
+properties in files, using these hooks, and thus to experiment with
+various data formats and find good ones.  Eventually we hope users 
+will produce good, general extensions we can install in Emacs.
+
+</P>
+<P>
+We suggest not trying to handle arbitrary Lisp objects as text property
+names or values--because a program that general is probably difficult
+to write, and slow.  Instead, choose a set of possible data types that
+are reasonably flexible, and not too hard to encode.
+
+</P>
+<P>
+See section <A HREF="elisp_389.html#SEC392">File Format Conversion</A>, for a related feature.
+
+</P>
+
+<P><HR><P>
+Go to the <A HREF="elisp_1.html">first</A>, <A HREF="elisp_513.html">previous</A>, <A HREF="elisp_515.html">next</A>, <A HREF="elisp_672.html">last</A> section, <A HREF="elisp_toc.html">table of contents</A>.
+</BODY>
+</HTML>

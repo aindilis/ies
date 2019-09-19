@@ -1,0 +1,236 @@
+logo
+
+Search form
+
+Search [               ]
+[Search]
+[siteheader] logo
+
+  • Home
+  • Innovation
+  • News
+  • Events
+
+You are here
+
+Home » Innovation
+
+Technologies
+
+See also
+
+HLT-MT Technologies
+
+Software
+
+Edits -
+
+A software package aimed at recognizing entailment relations between two
+portions of text
+
+TextPro -
+
+A suite of modular Natural Language Processing (NLP) tools for analysis of
+Italian and English texts
+
+jSRE -
+
+An open source Java tool for Relation Extraction
+
+jWeb1T -
+
+An open source Java tool for efficiently searching the Web 1T 5-gram corpus
+
+jFex -
+
+Java tool for Feature Extraction for Natural Language Processing applications
+
+jinFil -
+
+An open source Java tool for Instance Filtering
+
+jExSLI -
+
+An open source java tool for language identification
+
+jWebS -
+
+A software tool for Web people search
+
+jTCat -
+
+A software tool for text categorization
+
+jLSl -
+
+An open source Java tool for Latent Semantic Indexing
+
+EOP Platform -
+
+EXCITEMENT Open Platform
+
+KnowledgeStore -
+
+Scalable storage for text and RDF data
+
+Lexical resources
+
+MultiWordNet -
+
+A multilingual lexical database in which the Italian WordNet is strictly
+aligned with Princeton WordNet
+
+WordNet Domains -
+
+A lexical resource created by augmenting WordNet with domain labels. It
+includes WordNet-Affect.
+
+SentiWords -
+
+A high coverage resource containing roughly 155.000 words associated with a
+sentiment score
+
+MapNet -
+
+A FrameNet to WordNet Mapping
+
+QALL-ME Ontology -
+
+A domain-specific ontology for question answering in the domain of tourism
+
+Sensicon -
+
+A sensorial lexicon that associates English words with senses
+
+LICO -
+
+A lexicon for Italian discourse connectives
+
+Corpora
+
+CORPS -
+
+A corpus of political speeches tagged with specific audience reactions, such as
+applause or laughter
+
+I-CAB -
+
+An annotated corpus consisting of 525 news stories taken from a local newspaper
+
+Evalita NER2011 Dataset -
+
+The Dataset of the Evalita 2011 Named Entity Recognition Task
+
+CRIPCO -
+
+A corpus of Italian news stories annotated with information about person
+cross-document coreference
+
+SWiiT -
+
+Italian Wikipedia annotated with entity mentions
+
+MultiSemCor -
+
+An English/Italian parallel corpus
+
+T-PAS -
+
+Typed Predicate Argument Structures for Italian
+
+Causal-TimeBank -
+
+The TimeBank corpus taken from TempEval-3 task, annotated with causal
+information
+
+QALL-ME Benchmark -
+
+Annotated spoken requests in the tourism domain (Italian, Spanish, English and
+German)
+
+Textual Entailment Specialized Data Sets -
+
+RTE-5 pairs annotated with linguistic phenomena and monothematic pairs
+
+Wikisents for FrameNet -
+
+Wikipedia sentences with frame labels in English and Italian
+
+RTE-3-Ita -
+
+Italian version of the English RTE-3 dataset
+
+Fact-Ita Bank -
+
+A subpart of Ita-TimeBank annotated with factuality information
+
+ACEtoWiki -
+
+An extension of the English ACE 2005 Corpus with Ground-truth Links to
+Wikipedia
+
+Textual Entailment Graph Dataset -
+
+A gold standard dataset of entailment graphs for English and Italian
+
+Pilot Task of EVENTI @ Evalita 2014 -
+
+Test data set of the EVENTI Pilot Task on "Temporal Processing of Historical
+Texts"
+
+SemEval2015 TimeLine Dataset -
+
+Dataset of the SemEval-2015 Task "TimeLine: Cross-Document Event Ordering"
+
+NewsReader MEANTIME Corpus -
+
+A semantically annotated corpus of 480 news articles in 4 languages
+
+NE-annotated-tweets-AL -
+
+Tweets annotated with Named Entities following the NEEL-IT guidelines
+
+WItaC - NewsReader Wikinews Italian Corpus -
+
+The Italian section of the NewsReader MEANTIME corpus
+
+Contrast-Ita Bank -
+
+A corpus annotated with discourse contrast relations in Italian
+
+KRAUTS -
+
+A Temporally Annotated News Corpus in German
+
+DPD -
+
+A manually annotated Italian corpus of diary entries written by diabetic
+patients
+
+COSMIANU - Corpus Of Social Media Italian Annotated with Nominal Utterances -
+
+A manually annotated corpus of around 66,000 tokens
+
+Annotation Tools
+
+Cromer -
+
+A Tool for Cross-Document Event and Entity Coreference
+
+AnnotatorPro -
+
+A tool for annotation of linguistic data
+
+HLT Phonetic Scorer -
+
+A utility to compute phonetic features of tokenized sentences
+
+ [ICT_logo]
+
+© 2013 FBK - HLT | Via Sommarive, 18 | I-38123 Trento |
+
+Login
+Grafica Netwise
+
+ 
+
