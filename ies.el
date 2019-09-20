@@ -1,3 +1,5 @@
+;; see also nlu/ipa.el
+
 ;; similar to NLU, but intended to markup text for extraction
 
 (add-to-list 'load-path "/var/lib/myfrdcsa/codebases/minor/ies/frdcsa/emacs")
@@ -35,6 +37,8 @@
  (define-key ies-ghost-mode-map "lr" 'ies-label-region)
 
  (define-key nlu-ghost-mode-map "ts" 'ies-ghost-save-with-properties-and-tags)
+
+ (enriched-mode t)
  )
 
 (defun ies-ghost-buffer ()
@@ -250,15 +254,27 @@ with the tag and return that"
  (interactive)
  (let* ((text (buffer-substring (point) (mark)))
 	(length (length text)))
-  (mapcar #'read
-   (delete-dups
-    (sort
-     (mapcar #'prin1-to-string
-      (mapcar #'car
-       (mapcar (lambda (n)
-		(nlu-tags (text-properties-at n text)))
-	(seq 0 length))))
-     'string<)))))
+  (mapcar (lambda (prop)
+	   (let ((prop-string (format "%s" prop)))
+	    (list prop (list t prop-string))))
+   (remove nil
+    (mapcar #'read
+     (delete-dups
+      (sort
+       (mapcar #'prin1-to-string
+	(mapcar #'car
+	 (mapcar (lambda (n)
+		  (nlu-tags (text-properties-at n text)))
+	  (seq 0 length))))
+       'string<)))))))
+
+(defun ies-list-properties-for-scheme ()
+ ""
+ (interactive)
+ (mapcar (lambda (label)
+	  (list (read (concat nlu-property-header label))
+		 (list t (concat nlu-property-header label))))
+  (ies-labels)))
 
 ;; (defun ies-ghost-save-with-properties-and-tags ()
 ;;  ""
@@ -273,7 +289,264 @@ with the tag and return that"
  ""
  (interactive)
  (mark-whole-buffer)
- (setq enriched-translations (ies-list-properties-in-region))
+ (setq enriched-translations
+  '(
+    ;; (face
+    ;;  (bold-italic "bold" "italic")
+    ;;  (bold "bold")
+    ;;  (italic "italic")
+    ;;  (underline "underline")
+    ;;  (fixed "fixed")
+    ;;  (excerpt "excerpt")
+    ;;  (default)
+    ;;  (nil enriched-encode-other-face))
+    (left-margin
+     (4 "indent"))
+    (right-margin
+     (4 "indentright"))
+    (justification
+     (none "nofill")
+     (right "flushright")
+     (left "flushleft")
+     (full "flushboth")
+     (center "center"))
+    (PARAMETER
+     (t "param"))
+    (read-only
+     (t "x-read-only"))
+    (unknown
+     (nil format-annotate-value)))
+  )
+ ;; (mapcar (lambda (prop-desc) (add-to-list 'enriched-translations prop-desc)) (ies-list-properties-in-region))
+ (mapcar (lambda (prop-desc) (add-to-list 'enriched-translations prop-desc)) (ies-list-properties-for-scheme))
  (save-buffer))
 
 (ies-reset-colors-for-tags)
+
+
+
+
+(defun ies-test-display (a b)
+ (see (prin1-to-string (list a b))))
+
+;; (format-annotate-region (mark) (point) enriched-translations 'ies-test-display enriched-ignore)
+
+;; (format-annotate-region (mark) (point) enriched-translations 'enriched-make-annotation enriched-ignore)
+
+;; (format-annotate-location (point) nil enriched-ignore enriched-translations)
+
+;; (format-annotate-single-property-change 'x-nlu-name nil t enriched-translations)
+
+
+
+
+
+;; format-annotate-region
+
+(defun format-annotate-location (loc all ignore translations)
+ "Return annotation(s) needed at location LOC.
+This includes any properties that change between LOC - 1 and LOC.
+If ALL is true, don't look at previous location, but generate annotations for
+all non-nil properties.
+Third argument IGNORE is a list of text-properties not to consider.
+Use the TRANSLATIONS alist (see `format-annotate-region' for doc).
+
+Return value is a vector of 3 elements:
+1. List of annotations to close
+2. List of annotations to open.
+3. List of properties that were ignored or couldn't be annotated.
+
+The annotations in lists 1 and 2 need not be strings.
+They can be whatever the FORMAT-FN in `format-annotate-region'
+can handle.  If that is `enriched-make-annotation', they can be
+either strings, or lists of the form (PARAMETER VALUE)."
+ (let* ((prev-loc (1- loc))
+	(before-plist (if all nil (text-properties-at prev-loc)))
+	(after-plist (text-properties-at loc))
+	p negatives positives prop props not-found)
+  ;; make list of all property names involved
+  ;; (see before-plist)
+  ;; (see after-plist)
+  (setq p before-plist)
+  (while p
+   (if (not (memq (car p) props))
+    (push (car p) props))
+   (setq p (cdr (cdr p))))
+  (setq p after-plist)
+  (while p
+   (if (not (memq (car p) props))
+    (push (car p) props))
+   (setq p (cdr (cdr p))))
+  (while props
+   (setq prop (pop props))
+   (if (memq prop ignore)
+    nil  ; If it's been ignored before, ignore it now.
+    (let ((before (if all nil (car (cdr (memq prop before-plist)))))
+	  (after (car (cdr (memq prop after-plist)))))
+     (if (equal before after)
+      nil ; no change; ignore
+      (progn
+       ;; (see (list 'format-annotate-single-property-change prop before after translations))
+       (let ((result (ies-format-annotate-single-property-change
+		      prop before after translations)))
+	;; (see result)
+	(if (not result)
+	 (push prop not-found)
+	 (setq negatives (nconc negatives (car result))
+	  positives (nconc positives (cdr result))))))))))
+  (vector negatives positives not-found)))
+
+;; (let ((result (ies-format-annotate-single-property-change 'x-nlu-name nil t '((x-nlu-name (t "x-nlu-name")) (x-nlu-description (t "x-nlu-description")) (face (bold-italic "bold" "italic") (bold "bold") (italic "italic") (underline "underline") (fixed "fixed") (excerpt "excerpt") (default) (nil enriched-encode-other-face)) (left-margin (4 "indent")) (right-margin (4 "indentright")) (justification (none "nofill") (right "flushright") (left "flushleft") (full "flushboth") (center "center")) (PARAMETER (t "param")) (read-only (t "x-read-only")) (unknown (nil format-annotate-value))))))
+;;  (see result))
+
+;; (defun ies-format-annotate-single-property-change (prop before after translations)
+;;  (format-annotate-single-property-change prop before after translations))
+
+(defun ies-format-annotate-single-property-change (prop before after translations)
+ (let ((prop-string (format "%s" prop)))
+  (if (and
+       (>= (length prop-string) (length nlu-property-header))
+       (string= (substring prop-string 0 (length nlu-property-header)) nlu-property-header))
+   (if before (list (list (list prop-string)))
+    (if after (list nil (list prop-string))))
+   (format-annotate-single-property-change prop before after translations))))
+
+(defun ies-reopen-file-literally ()
+ ""
+ (interactive)
+ (let* ((buffer (current-buffer))
+	(file (buffer-file-name buffer)))
+  (kill-buffer buffer)
+  (find-file-literally file)))
+
+(defun ies-reopen-file-normally ()
+ ""
+ (interactive)
+ (let* ((buffer (current-buffer))
+	(file (buffer-file-name buffer)))
+  (condition-case nil 
+   (save-mark-and-excursion
+    (kill-buffer buffer)
+    (find-file file)
+    (ies-ghost-mode)
+    (mark-whole-buffer)
+    (ies-redisplay-text-with-tags-emphasized)))))
+
+;; (setq enriched-translations
+;;  '((x-nlu-name
+;;     (t "x-nlu-name"))
+;;    (x-nlu-description
+;;     (t "x-nlu-description"))
+;;    (face
+;;     (bold-italic "bold" "italic")
+;;     (bold "bold")
+;;     (italic "italic")
+;;     (underline "underline")
+;;     (fixed "fixed")
+;;     (excerpt "excerpt")
+;;     (default)
+;;     (nil enriched-encode-other-face))
+;;    (left-margin
+;;     (4 "indent"))
+;;    (right-margin
+;;     (4 "indentright"))
+;;    (justification
+;;     (none "nofill")
+;;     (right "flushright")
+;;     (left "flushleft")
+;;     (full "flushboth")
+;;     (center "center"))
+;;    (PARAMETER
+;;     (t "param"))
+;;    (read-only
+;;     (t "x-read-only"))
+;;    (unknown
+;;     (nil format-annotate-value)))
+;;  )
+
+;; (defun format-annotate-region (from to translations format-fn ignore)
+;;   "Generate annotations for text properties in the region.
+;; Search for changes between FROM and TO, and describe them with a list of
+;; annotations as defined by alist TRANSLATIONS and FORMAT-FN.  IGNORE lists text
+;; properties not to consider; any text properties that are neither ignored nor
+;; listed in TRANSLATIONS are warned about.
+;; If you actually want to modify the region, give the return value of this
+;; function to `format-insert-annotations'.
+
+;; Format of the TRANSLATIONS argument:
+
+;; Each element is a list whose car is a PROPERTY, and the following
+;; elements have the form (VALUE ANNOTATIONS...).
+;; Whenever the property takes on the value VALUE, the annotations
+;; \(as formatted by FORMAT-FN) are inserted into the file.
+;; When the property stops having that value, the matching negated annotation
+;; will be inserted \(it may actually be closed earlier and reopened, if
+;; necessary, to keep proper nesting).
+
+;; If VALUE is a list, then each element of the list is dealt with
+;; separately.
+
+;; If a VALUE is numeric, then it is assumed that there is a single annotation
+;; and each occurrence of it increments the value of the property by that number.
+;; Thus, given the entry \(left-margin \(4 \"indent\")), if the left margin
+;; changes from 4 to 12, two <indent> annotations will be generated.
+
+;; If the VALUE is nil, then instead of annotations, a function should be
+;; specified.  This function is used as a default: it is called for all
+;; transitions not explicitly listed in the table.  The function is called with
+;; two arguments, the OLD and NEW values of the property.  It should return
+;; a cons cell (CLOSE . OPEN) as `format-annotate-single-property-change' does.
+
+;; The same TRANSLATIONS structure can be used in reverse for reading files."
+;;   (let ((all-ans nil)    ; All annotations - becomes return value
+;; 	(open-ans nil)   ; Annotations not yet closed
+;; 	(loc nil)	 ; Current location
+;; 	(not-found nil)) ; Properties that couldn't be saved
+;;     (while (or (null loc)
+;; 	       (and (setq loc (next-property-change loc nil to))
+;; 		    (< loc to)))
+;;       (or loc (setq loc from))
+;;       (let* ((ans (format-annotate-location loc (= loc from) ignore translations))
+;; 	     (neg-ans (format-reorder (aref ans 0) open-ans))
+;; 	     (pos-ans (aref ans 1))
+;; 	     (ignored (aref ans 2)))
+;; 	(setq not-found (append ignored not-found)
+;; 	      ignore    (append ignored ignore))
+;; 	;; First do the negative (closing) annotations
+;; 	(while neg-ans
+;; 	  ;; Check if it's missing.  This can happen (eg, a numeric property
+;; 	  ;; going negative can generate closing annotations before there are
+;; 	  ;; any open).  Warn user & ignore.
+;; 	  (if (not (member (car neg-ans) open-ans))
+;; 	      (message "Can't close %s: not open." (car neg-ans))
+;; 	    (while (not (equal (car neg-ans) (car open-ans)))
+;; 	      ;; To close anno. N, need to first close ans 1 to N-1,
+;; 	      ;; remembering to re-open them later.
+;; 	      (push (car open-ans) pos-ans)
+;; 	      (setq all-ans
+;; 		    (cons (cons loc (funcall format-fn (car open-ans) nil))
+;; 			  all-ans))
+;; 	      (setq open-ans (cdr open-ans)))
+;; 	    ;; Now remove the one we're really interested in from open list.
+;; 	    (setq open-ans (cdr open-ans))
+;; 	    ;; And put the closing annotation here.
+;; 	    (push (cons loc (funcall format-fn (car neg-ans) nil))
+;; 		  all-ans))
+;; 	  (setq neg-ans (cdr neg-ans)))
+;; 	;; Now deal with positive (opening) annotations
+;;         (while pos-ans
+;;           (push (car pos-ans) open-ans)
+;;           (push (cons loc (funcall format-fn (car pos-ans) t))
+;;                 all-ans)
+;;           (setq pos-ans (cdr pos-ans)))))
+
+;;     ;; Close any annotations still open
+;;     (while open-ans
+;;       (setq all-ans
+;; 	    (cons (cons to (funcall format-fn (car open-ans) nil))
+;; 		  all-ans))
+;;       (setq open-ans (cdr open-ans)))
+;;     (if not-found
+;; 	(message "These text properties could not be saved:\n    %s"
+;; 		 not-found))
+;;     (nreverse all-ans)))

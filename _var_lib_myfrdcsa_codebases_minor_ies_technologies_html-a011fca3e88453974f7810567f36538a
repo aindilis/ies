@@ -1,0 +1,431 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<<!DOCTYPE html>
+<<!--[if IEMobile 7]><<html class="iem7"  lang="en" dir="ltr"><<![endif]-->
+<<!--[if lte IE 6]><<html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><<![endif]-->
+<<!--[if (IE 7)&(!IEMobile)]><<html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><<![endif]-->
+<<!--[if IE 8]><<html class="lt-ie9"  lang="en" dir="ltr"><<![endif]-->
+<<!--[if (gte IE 9)|(gt IEMobile 7)]><<!--><<html  lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><<!--<<![endif]-->
+
+<<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<<link rel="shortcut icon" href="https://hlt-nlp.fbk.eu/sites/hlt-nlp.fbk.eu/themes/fbkunit/favicon.ico" type="image/vnd.microsoft.icon" />
+  <<title>Technologies | HLT-NLP<</title>
+
+  <<meta name="viewport" content="width=1024">
+  <<meta http-equiv="cleartype" content="on">
+
+  <<style type="text/css" media="all">
+@import url("https://hlt-nlp.fbk.eu/modules/system/system.base.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/modules/system/system.messages.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/modules/system/system.theme.css?pq7cvm");
+<</style>
+<<style type="text/css" media="all">
+@import url("https://hlt-nlp.fbk.eu/modules/aggregator/aggregator.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/ais/assets/css/ais.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/date/date_api/date.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/modules/field/theme/field.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/modules/node/node.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/relation_add/relation_add.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/modules/search/search.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/modules/user/user.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/views/css/views.css?pq7cvm");
+<</style>
+<<style type="text/css" media="all">
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/ctools/css/ctools.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/custom/ugov/publications.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.css?pq7cvm");
+<</style>
+<<style type="text/css" media="all">
+<<!--/*--><<![CDATA[/*><<!--*/
+#sliding-popup.sliding-popup-bottom{background:#b1b1b1;}#sliding-popup .popup-content #popup-text h1,#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text h3,#sliding-popup .popup-content #popup-text p{color:#ffffff !important;}
+
+/*]]>*/-->
+<</style>
+<<style type="text/css" media="all">
+@import url("https://hlt-nlp.fbk.eu/sites/all/themes/fbkcenter/css/normalize.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/themes/fbkcenter/css/tabs.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/themes/fbkcenter/css/pages.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/all/themes/fbkcenter/css/print.css?pq7cvm");
+@import url("https://hlt-nlp.fbk.eu/sites/hlt-nlp.fbk.eu/themes/fbkunit/fbkunit.css?pq7cvm");
+<</style>
+  <<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <<script type="text/javascript" src="https://hlt-nlp.fbk.eu/misc/jquery.js?v=1.4.4"><</script>
+<<script type="text/javascript" src="https://hlt-nlp.fbk.eu/misc/jquery-extend-3.4.0.js?v=1.4.4"><</script>
+<<script type="text/javascript" src="https://hlt-nlp.fbk.eu/misc/jquery.once.js?v=1.2"><</script>
+<<script type="text/javascript" src="https://hlt-nlp.fbk.eu/misc/drupal.js?pq7cvm"><</script>
+<<script type="text/javascript" src="https://hlt-nlp.fbk.eu/misc/jquery.cookie.js?v=1.0"><</script>
+<<script type="text/javascript">
+<<!--//--><<![CDATA[//><<!--
+Drupal.settings.ais = [{"name":"threshold-480","size":"480"},{"name":"threshold-768","size":"768"},{"name":"threshold-992","size":"992"},{"name":"threshold-1382","size":"1382"}];
+Drupal.settings.ais_method = "both-max";
+//--><<!]]>
+<</script>
+<<script type="text/javascript" src="https://hlt-nlp.fbk.eu/sites/all/modules/ais/assets/js/ais.js?pq7cvm"><</script>
+<<script type="text/javascript" src="https://hlt-nlp.fbk.eu/sites/all/modules/google_analytics/googleanalytics.js?pq7cvm"><</script>
+<<script type="text/javascript">
+<<!--//--><<![CDATA[//><<!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-393458-9", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><<!]]>
+<</script>
+<<script type="text/javascript">
+<<!--//--><<![CDATA[//><<!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"fbkunit","theme_token":"hdYJd0FOViPrV7OrougRAedcXGLBX5a2mpFUFbVQDgc","js":{"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/jquery.cookie.js":1,"0":1,"ais\/assets\/js\/ais.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/ais\/assets\/css\/ais.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/relation_add\/relation_add.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom\/ugov\/publications.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"0":1,"sites\/all\/themes\/fbkcenter\/system.menus.css":1,"sites\/all\/themes\/fbkcenter\/css\/normalize.css":1,"sites\/all\/themes\/fbkcenter\/css\/tabs.css":1,"sites\/all\/themes\/fbkcenter\/css\/pages.css":1,"sites\/all\/themes\/fbkcenter\/css\/print.css":1,"sites\/hlt-nlp.fbk.eu\/themes\/fbkunit\/fbkunit.css":1}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":0,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cp\u003E\u003Cspan\u003EFBK websites use cookies. More info about cookies are available in the\u0026nbsp;\u003C\/span\u003E\u003Ca href=\u0022https:\/\/www.fbk.eu\/en\/privacy-cookies-policy\/\u0022 target=\u0022_blank\u0022\u003EPrivacy and cookies policy\u003C\/a\u003E\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I agree\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cp\u003EThank you for accepting cookies.\u003C\/p\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button\u0022\u003EHide\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022 \u003EMore info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.fbk.eu\/en\/privacy-cookies-policy\/","popup_link_new_window":1,"popup_position":null,"popup_language":"en","better_support_for_screen_readers":0,"cookie_name":"","reload_page":0,"domain":"fbk.eu","popup_eu_only_js":0,"cookie_lifetime":"100","disagree_do_not_show_popup":0},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/technologies":true}});
+//--><<!]]>
+<</script>
+<</head>
+<<body class="html not-front not-logged-in one-sidebar sidebar-second page-technologies i18n-en" >
+      
+<<div id="page">
+
+  <<div class="header">
+		<<div class="clearfix pageCenter">
+		  <<a href="http://www.fbk.eu" title="FBK"><<img src="/sites/all/themes/fbkcenter/logo.png" alt="logo" class="logo"/><</a>
+		    <<div class="region region-header">
+    <<div id="block-search-form" class="clearfix block block-search first odd" role="search">
+
+      
+	<<div class="block-content"><<form action="/technologies" method="post" id="search-block-form" accept-charset="UTF-8"><<div><<div class="container-inline">
+      <<h2 class="element-invisible">Search form<</h2>
+    <<div class="form-item form-type-textfield form-item-search-block-form">
+  <<label class="element-invisible" for="edit-search-block-form--2">Search <</label>
+ <<input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+<</div>
+<<div class="form-actions form-wrapper" id="edit-actions"><<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /><</div><<input type="hidden" name="form_build_id" value="form-i3uLPGfTANPy6eqCrz3CXiJ1IgeuQ3xLed9-nVzcYIo" />
+<<input type="hidden" name="form_id" value="search_block_form" />
+<</div>
+<</div><</form><</div>
+
+<</div><<!-- /.block -->
+  <</div><<!-- /.region -->
+	  <</div>
+  <</div>
+  
+  <<div class="navwrap">
+    <<div class="pageCenter wrap">
+      <<img src="https://hlt-nlp.fbk.eu/sites/hlt-nlp.fbk.eu/themes/fbkunit/siteheader.png" class="navImage"/>
+      <<a class="homelink" href="/" title="Home">
+        <<img src="https://hlt-nlp.fbk.eu/sites/hlt-nlp.fbk.eu/themes/fbkunit/logo-en.png" alt="logo"/>
+      <</a>
+      <<div id="nav">  <<div class="region region-navigation">
+    <<div id="block-system-main-menu" class="clearfix block block-system block-menu first odd" role="navigation">
+
+      
+	<<div class="block-content"><<ul class="clearfix menu"><<li class="first leaf"><<a href="https://ict.fbk.eu/units/nlp/" title="">Home<</a><</li>
+<<li class="leaf active-trail"><<a href="/technologies" title="" class="active-trail active">Innovation<</a><</li>
+<<li class="leaf"><<a href="/news" title="">News<</a><</li>
+<<li class="last collapsed"><<a href="/events" title="">Events<</a><</li>
+<</ul><</div>
+
+<</div><<!-- /.block -->
+  <</div><<!-- /.region -->
+<</div>
+    <</div>
+  <</div>
+
+  <<div class="pageCenter wrap">
+		
+		<<div class="clearfix container">
+			  
+			<<div class="mainWrapper">
+				<<div class="mainTop">
+					<<h2 class="element-invisible">You are here<</h2><<div class="breadcrumb"><<a href="/">Home<</a> » Innovation<</div>						<<h1 class="title" id="page-title">Technologies<</h1>				<</div>
+				<<div class="clearfix main">
+				  				    <<div class="sidebarSecond">  <<div class="region region-sidebar-second">
+    <<div id="block-block-6" class="clearfix block block-block first odd">
+
+        <<h2 class="block-title">See also<</h2>
+    
+	<<div class="block-content"><<p><<a href="https://hlt-mt.fbk.eu/technologies" target="_blank" rel="nofollow">HLT-MT Technologies<</a><</p>
+<</div>
+
+<</div><<!-- /.block -->
+  <</div><<!-- /.region -->
+<</div>
+				  					<<div class="oh mainContent">  <<div class="region region-content">
+    
+
+<<div class="view view-technologies view-id-technologies view-display-id-page view-dom-id-cb8e6f5299f6aa3c93b053e291f5b4a7">
+        
+  
+  
+      <<div class="view-content">
+        <<h3>Software<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="<x-nlu-url>/technologies/edits</x-nlu-url>"><x-nlu-name>Edits</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p> <x-nlu-description>A software package aimed at recognizing entailment relations between two portions of text</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/textpro">TextPro<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A suite of modular Natural Language Processing (NLP) tools for analysis of Italian and English texts<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-3 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jsre">jSRE<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An open source Java tool for Relation Extraction <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-4 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jweb1t">jWeb1T<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An open source Java tool for efficiently searching the Web 1T 5-gram corpus<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-5 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jfex">jFex<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Java tool for Feature Extraction for Natural Language Processing applications<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-6 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jinfil">jinFil<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An open source Java tool for Instance Filtering<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-7 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jexsli">jExSLI<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An open source java tool for language identification<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-8 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jwebs">jWebS<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A software tool for Web people search<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-9 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jtcat">jTCat<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A software tool for text categorization<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-10 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jlsl">jLSl<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An open source Java tool for Latent Semantic Indexing<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-11 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/eop-platform">EOP Platform<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>EXCITEMENT Open Platform<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-12 views-row-even views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/knowledgestore">KnowledgeStore<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Scalable storage for text and RDF data<</p>
+<</span>  <</span>  <</div>
+  <<h3>Lexical resources<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/multiwordnet">MultiWordNet<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A multilingual lexical database in which the Italian WordNet is strictly aligned with Princeton WordNet<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/wordnet-domains">WordNet Domains<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A lexical resource created by augmenting WordNet with domain labels. It includes <<b>WordNet-Affect<</b>.<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-3 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/sentiwords">SentiWords<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A high coverage resource containing roughly 155.000 words associated with a sentiment score <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-4 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/mapnet">MapNet<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A FrameNet to WordNet Mapping<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-5 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/qall-me-ontology">QALL-ME Ontology<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A domain-specific ontology for question answering in the domain of tourism<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-6 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/sensicon">Sensicon<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A sensorial lexicon that associates English words with senses<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-7 views-row-odd views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/lico">LICO<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A lexicon for Italian discourse connectives <</p>
+<</span>  <</span>  <</div>
+  <<h3>Corpora<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/corps">CORPS<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A corpus of political speeches tagged with specific audience reactions, such as applause or laughter<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/i-cab">I-CAB<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An annotated corpus consisting of 525 news stories taken from a local newspaper<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-3 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/evalita-ner2011-dataset">Evalita NER2011 Dataset<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>The Dataset of the Evalita 2011 Named Entity Recognition Task<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-4 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/cripco">CRIPCO<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A corpus of Italian news stories annotated with information about person cross-document coreference<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-5 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/swiit">SWiiT<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Italian Wikipedia annotated with entity mentions<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-6 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/multisemcor">MultiSemCor<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An English/Italian parallel corpus<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-7 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/t-pas">T-PAS <</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Typed Predicate Argument Structures for Italian<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-8 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/causal-timebank">Causal-TimeBank<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>The TimeBank corpus taken from TempEval-3 task, annotated with causal information<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-9 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/qall-me-benchmark">QALL-ME Benchmark<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Annotated spoken requests in the tourism domain (Italian, Spanish, English and German)<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-10 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/textual-entailment-specialized-data-sets">Textual Entailment Specialized Data Sets<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>RTE-5 pairs annotated with linguistic phenomena and monothematic pairs<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-11 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/wikisents-framenet">Wikisents for FrameNet<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Wikipedia sentences with frame labels in English and Italian<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-12 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/rte-3-ita">RTE-3-Ita<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Italian version of the English RTE-3 dataset <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-13 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/fact-ita-bank">Fact-Ita Bank<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A subpart of Ita-TimeBank annotated with factuality information<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-14 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/acetowiki">ACEtoWiki<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An extension of the English ACE 2005 Corpus  with Ground-truth Links to Wikipedia<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-15 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/textual-entailment-graph-dataset">Textual Entailment Graph Dataset<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A gold standard dataset of entailment graphs for English and Italian <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-16 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/pilot-task-eventi-evalita-2014">Pilot Task of EVENTI @ Evalita 2014 <</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Test data set of the EVENTI Pilot Task on "Temporal Processing of Historical Texts"<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-17 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/semeval2015-timeline-dataset"> SemEval2015 TimeLine Dataset<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Dataset of the SemEval-2015 Task "TimeLine: Cross-Document Event Ordering"<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-18 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/newsreader-meantime-corpus">NewsReader MEANTIME Corpus<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A semantically annotated corpus of 480 news articles in 4 languages<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-19 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/ne-annotated-tweets-al">NE-annotated-tweets-AL<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Tweets annotated with Named Entities following the NEEL-IT guidelines<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-20 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/witac-newsreader-wikinews-italian-corpus">WItaC - NewsReader Wikinews Italian Corpus<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>The Italian section of the NewsReader MEANTIME corpus<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-21 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/contrast-ita-bank">Contrast-Ita Bank<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A corpus annotated with discourse contrast relations in Italian<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-22 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/krauts">KRAUTS<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A Temporally Annotated News Corpus in German<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-23 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/dpd">DPD<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A manually annotated Italian corpus of diary entries written by diabetic patients<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-24 views-row-even views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/cosmianu1.0">COSMIANU - Corpus Of Social Media Italian Annotated with Nominal Utterances<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A manually annotated corpus of around 66,000 tokens <</p>
+<</span>  <</span>  <</div>
+  <<h3>Annotation Tools<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/cromer">Cromer<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p> A Tool for Cross-Document Event and Entity Coreference<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/annotatorpro">AnnotatorPro<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A tool for annotation of linguistic data<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/hlt-phonetic-scorer">HLT Phonetic Scorer<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>A utility to compute phonetic features of tokenized sentences<</p>
+<</span>  <</span>  <</div>
+    <</div>
+  
+  
+  
+  
+  
+  
+<</div><<!-- block__no_wrapper -->
+  <</div><<!-- /.region -->
+<</div>
+				<</div>
+			<</div>
+			
+			
+		<</div><<!-- /#main -->
+		
+		  <<div class="footer region region-footer">
+    <<div id="footer_block" class="clearfix block block-block first odd">
+
+          
+    <<div class="block-content"><<p class="col1">&nbsp;<<a href="http://ict.fbk.eu/" target="_blank"><<img src="/sites/all/themes/fbkunit/images/ICT_logo.png" alt="" height="52" width="150"><</a><</p>
+<<p class="col2"><<strong>© 2013 FBK - HLT <</strong>| Via Sommarive, 18 | I-38123 Trento |<</p>
+<<p class="col3"><<a href="/user">Login<<br><</a>Grafica Netwise<</p>
+<<p>&nbsp;<</p>
+<</div>
+
+<</div><<!-- /.block -->
+  <</div><<!-- region__footer -->
+  <</div>
+<</div>
+  <<script type="text/javascript" src="https://hlt-nlp.fbk.eu/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js?pq7cvm"><</script>
+<</body>
+<</html>
