@@ -1,0 +1,158 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<<HTML>
+<<HEAD>
+ <<META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.21">
+ <<TITLE>GNU/Linux AI &amp; Alife HOWTO: Symbolic Systems (GOFAI)<</TITLE>
+ <<LINK HREF="AI-Alife-HOWTO-3.html" REL=next>
+ <<LINK HREF="AI-Alife-HOWTO-1.html" REL=previous>
+ <<LINK HREF="AI-Alife-HOWTO.html#toc2" REL=contents>
+<</HEAD>
+<<BODY>
+<<A HREF="AI-Alife-HOWTO-3.html">Next<</A>
+<<A HREF="AI-Alife-HOWTO-1.html">Previous<</A>
+<<A HREF="AI-Alife-HOWTO.html#toc2">Contents<</A>
+<<HR>
+<<H2><<A NAME="Symbolic Systems (GOFAI)"><</A> <<A NAME="s2">2.<</A> <<A HREF="AI-Alife-HOWTO.html#toc2">Symbolic Systems (GOFAI)<</A>    <</H2>
+
+
+<<P>Traditionally AI was based around the ideas of logic, rule systems,
+linguistics, and the concept of rationality. At its roots are programming
+languages such as Lisp and Prolog though newer systems tend to use more
+popular procedural languages. Expert systems are the largest successful
+example of this paradigm.  An expert system consists of a detailed
+knowledge base and a complex rule system to utilize it. Such systems have
+been used for such things as medical diagnosis support and credit checking
+systems.<</P>
+
+
+<<H2><<A NAME="ss2.1">2.1<</A> <<A HREF="AI-Alife-HOWTO.html#toc2.1">AI class/code libraries<</A>
+    <</H2>
+
+
+<<P>These are libraries of code or classes for use in programming within
+the artificial intelligence field.  They are not meant as stand alone
+applications, but rather as tools for building your own applications.<</P>
+<<P>
+<<DL>
+<<P>
+<<A NAME="ACL2"><</A> <</P>
+<<DT><<B><x-nlu-name>ACL2</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url>http://www.cliki.net/ACL2</x-nlu-url>">www.cliki.net/ACL2<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>ACL2 (A Computational Logic for Applicative Common Lisp) is a theorem
+prover for industrial applications. It is both a mathematical logic and
+a system of tools for constructing proofs in the logic.  ACL2 works
+with GCL (GNU Common Lisp).<</P></x-nlu-description>
+
+<<P>
+<<A NAME="AI Kernel"><</A> <</P>
+<<DT><<B><x-nlu-name>AI Kernel</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url>http://aikernel.sourceforge.net/</x-nlu-url>">aikernel.sourceforge.net<</A><</LI>
+<<LI>Sourceforge site: 
+<<A HREF="<x-nlu-url>http://sourceforge.net/projects/aikernel/</x-nlu-url>">sourceforge.net/projects/aikernel/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>The AI Kernel is a re-usable artificial intelligence engine that uses
+natural language processing and an Activator / Context model to allow
+multi tasking between installed cells.<</P></x-nlu-description>
+
+<<P>
+<<A NAME="AI Search II"><</A>  <</P>
+<<DT><<B><x-nlu-name>AI Search II</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>WEB site: 
+<<A HREF="<x-nlu-url>http://www.neiu.edu/~kwtracy/ooai-book/</x-nlu-url>">http://www.neiu.edu/~kwtracy/ooai-book/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>Basically, the library offers the programmer a set of search
+algorithms that may be used to solve all kind of different
+problems. The idea is that when developing problem solving software
+the programmer should be able to concentrate on the representation of
+the problem to be solved and should not need to bother with the
+implementation of the search algorithm that will be used to actually
+conduct the search. This idea has been realized by the implementation
+of a set of search classes that may be incorporated in other software
+through <<B>C++<</B>'s features of derivation and inheritance.  The
+following search algorithms have been implemented:<</P>
+
+<<P>
+<<UL>
+<<LI>depth-first tree and graph search.<</LI>
+<<LI>breadth-first tree and graph search.<</LI>
+<<LI>uniform-cost tree and graph search.<</LI>
+<<LI>best-first search.<</LI>
+<<LI>bidirectional depth-first tree and graph search.<</LI>
+<<LI>bidirectional breadth-first tree and graph search.<</LI>
+<<LI>AND/OR depth tree search.<</LI>
+<<LI>AND/OR breadth tree search.<</LI>
+<</UL>
+<</P>
+
+<<P>This library has a corresponding book, "
+<<A HREF="http://www.neiu.edu/~kwtracy/ooai-book/">Object-Oriented Artificial Intelligence, Using C++<</A>".<</P>
+</x-nlu-description>
+<<P>
+<<A NAME="Alchemy"><</A> <</P>
+<<DT><<B><x-nlu-name>Alchemy</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url>http://alchemy.cs.washington.edu/</x-nlu-url>">http://alchemy.cs.washington.edu/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>Alchemy is a software package providing a series of algorithms for
+statistical relational learning and probabilistic logic inference,
+based on the Markov logic representation. Alchemy allows you to easily
+develop a wide range of AI applications, including:<</P>
+<<P>
+<<UL>
+<<LI>Collective classification<</LI>
+<<LI>Link prediction<</LI>
+<<LI>Entity resolution<</LI>
+<<LI>Social network modeling<</LI>
+<<LI>Information extraction<</LI>
+<</UL>
+<</P></x-nlu-description>
+
+<<P>
+<<A NAME="Aleph"><</A> <</P>
+<<DT><<B><x-nlu-name>Aleph</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url>http://www.cs.ox.ac.uk/activities/machlearn/Aleph/</x-nlu-url>">http://www.cs.ox.ac.uk/activities/machlearn/Aleph/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>This document provides reference information on A Learning Engine for
+Proposing Hypotheses (Aleph). Aleph is an Inductive Logic Programming
+(ILP) system. Aleph is intended to be a prototype for exploring ideas.
+Aleph is an ILP algorithm implemented in Prolog by Dr Ashwin
+Srinivasan at the Oxford University Computing Laboratory, and is
+written specifically for compilation with the YAP Prolog compiler<</P></x-nlu-description>
+
+<<P>
+<<A NAME="CBR Microprograms"><</A> <</P>
+<<DT><<B><x-nlu-name>Microprograms</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url>http://www.cs.indiana.edu/~leake/cbr/code/</x-nlu-url>">http://www.cs.indiana.edu/~leake/cbr/code/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>A collection of case-based reasoning "micro" versions of dissertation
+programs that were developed for pedagogical purposes. These programs
+are meant to distill key aspects of the original programs into a form
+that can be easily understood, modified, and extended.<</P></x-nlu-description>
+
+<<P>
+<<A NAME="Chess In List"><</A> <</P>
+<<DT><<B>Chess In Lisp (CIL)<</B><<DD><<P>
+<<UL>
+<<LI>Web site: *found as part of the CLOCC archive at: 
+<<A HREF="http://clocc.sourceforge.net/">clocc.sourceforge.net<</A><</LI>
+<</UL>

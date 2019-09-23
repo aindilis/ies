@@ -1,0 +1,21 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+      <<div class="view-content">
+        <<h3>Software<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="<x-nlu-url>/technologies/edits</x-nlu-url>"><x-nlu-name>Edits</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p> <x-nlu-description>A software package aimed at recognizing entailment relations between two portions of text</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="<x-nlu-url>/technologies/textpro</x-nlu-url>"><x-nlu-name>TextPro</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A suite of modular Natural Language Processing (NLP) tools for analysis of Italian and English texts</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-3 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="<x-nlu-url>/technologies/jsre</x-nlu-url>"><x-nlu-name>jSRE</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>An open source Java tool for Relation Extraction</x-nlu-description> <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-4 v

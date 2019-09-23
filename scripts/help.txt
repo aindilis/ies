@@ -1,0 +1,70 @@
+Training, testing and running a generic tagger.
+--help TRUE|FALSE
+  Print this command line option usage information.  Give argument of TRUE for longer documentation
+  Default is false
+--prefix-code 'JAVA CODE'
+  Java code you want run before any other interpreted code.  Note that the text is interpreted without modification, so unlike some other Java code options, you need to include any necessary 'new's when creating objects.
+  Default is null
+--config FILE
+  Read command option values from a file
+  Default is null
+--gaussian-variance DECIMAL
+  The gaussian prior variance used for training.
+  Default is 10.0
+--train true|false
+  Whether to train
+  Default is false
+--iterations INTEGER
+  Number of training iterations
+  Default is 500
+--test lab or seg=start-1.continue-1,...,start-n.continue-n
+  Test measuring labeling or segmentation (start-i, continue-i) accuracy
+  Default is null
+--training-proportion DECIMAL
+  Fraction of data to use for training in a random split.
+  Default is 0.5
+--model-file FILENAME
+  The filename for reading (train/run) or saving (train) the model.
+  Default is null
+--random-seed INTEGER
+  The random seed for randomly selecting a proportion of the instance list for training
+  Default is 0
+--orders COMMA-SEP-DECIMALS
+  List of label Markov orders (main and backoff) 
+  Default is 1
+--forbidden REGEXP
+  label1,label2 transition forbidden if it matches this
+  Default is \s
+--allowed REGEXP
+  label1,label2 transition allowed only if it matches this
+  Default is .*
+--default-label STRING
+  Label for initial context and uninteresting tokens
+  Default is O
+--viterbi-output true|false
+  Print Viterbi periodically during training
+  Default is false
+--fully-connected true|false
+  Include all allowed transitions, even those not in training data
+  Default is true
+--weights sparse|some-dense|dense
+  Use sparse, some dense (using a heuristic), or dense features on transitions.
+  Default is some-dense
+--continue-training true|false
+  Continue training from model specified by --model-file
+  Default is false
+--n-best INTEGER
+  How many answers to output
+  Default is 1
+--cache-size INTEGER
+  How much state information to memoize in n-best decoding
+  Default is 100000
+--include-input true|false
+  Whether to include the input features when printing decoding output
+  Default is false
+--feature-induction true|false
+  Whether to perform feature induction during training
+  Default is false
+--threads INTEGER
+  Number of threads to use for CRF training.
+  Default is 1

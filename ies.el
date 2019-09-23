@@ -15,7 +15,6 @@
  
  (define-key ies-mode-map "ls" 'ies-load-label-scheme)
  (define-key ies-mode-map "lm" 'ies-load-model)
-
  (define-key ies-mode-map "lr" 'ies-label-region)
 
  ;; (suppress-keymap nlu-mode-map)
@@ -29,23 +28,38 @@
 \\{ies-ghost-mode-map}"
  (setq case-fold-search nil)
  ;; (define-key nlu-ghost-mode-map "cb" 'clear-queue-current-buffer-referent)
- (nlu-read-only t)
+ (nlu-read-only nil)
 
  (define-key ies-ghost-mode-map "ls" 'ies-load-label-scheme)
  (define-key ies-ghost-mode-map "lm" 'ies-load-model)
-
  (define-key ies-ghost-mode-map "lr" 'ies-label-region)
 
- (define-key nlu-ghost-mode-map "ts" 'ies-ghost-save-with-properties-and-tags)
+ (define-key ies-ghost-mode-map "ts" 'ies-ghost-save-with-properties-and-tags)
 
+ (define-key ies-ghost-mode-map "ct" 'ies-train-region)
+ (define-key ies-ghost-mode-map "cc" 'ies-classify-region)
+
+ (define-key ies-ghost-mode-map "rl" 'ies-reopen-file-literally)
+ (define-key ies-ghost-mode-map "rn" 'ies-reopen-file-normally)
+
+ (define-key ies-ghost-mode-map "rw" 'ies-open-ghosted-html-as-w3m)
+
+ (setq-local use-hard-newlines nil)
  (enriched-mode t)
+ (mark-whole-buffer)
+ (ies-redisplay-text-with-tags-emphasized)
+ (set-mark (point))
+ (ies-ghost-save-with-properties-and-tags)
+ (nlu-read-only t)
  )
 
 (defun ies-ghost-buffer ()
  ""
  (interactive)
+ (fundamental-mode)
  (nlu-ghost-buffer)
  (ies-ghost-mode))
+
 
 (defvar ies-label-scheme-directory (frdcsa-el-concat-dir (list "/var/lib/myfrdcsa/codebases/minor/ies" "data-git/schemes")))
 
@@ -194,7 +208,7 @@
   (save-excursion
    (goto-char min)
    (nlu-unlock-temporarily-and-execute
-    '(while (<= (point) max)
+    '(while (< (point) max)
       (dolist (tag (plist-keys (nlu-tags (text-properties-at (point))))) 
        (put-text-property (point) (+ (point) 1) 'face (cons 'foreground-color (ies-get-color-for-tag tag))))
       (forward-char))))))
@@ -288,7 +302,6 @@ with the tag and return that"
 (defun ies-ghost-save-with-properties-and-tags ()
  ""
  (interactive)
- (mark-whole-buffer)
  (setq enriched-translations
   '(
     ;; (face
@@ -317,8 +330,11 @@ with the tag and return that"
     (unknown
      (nil format-annotate-value)))
   )
- ;; (mapcar (lambda (prop-desc) (add-to-list 'enriched-translations prop-desc)) (ies-list-properties-in-region))
- (mapcar (lambda (prop-desc) (add-to-list 'enriched-translations prop-desc)) (ies-list-properties-for-scheme))
+ (mark-whole-buffer)
+ (mapcar (lambda (prop-desc) (add-to-list 'enriched-translations prop-desc)) (ies-list-properties-for-scheme)) ;; (ies-list-properties-in-region))
+ (set-mark (point))
+ (add-to-list 'enriched-ignore 'x-color)
+ (add-to-list 'enriched-ignore 'param)
  (save-buffer))
 
 (ies-reset-colors-for-tags)
@@ -428,125 +444,41 @@ either strings, or lists of the form (PARAMETER VALUE)."
    (save-mark-and-excursion
     (kill-buffer buffer)
     (find-file file)
-    (ies-ghost-mode)
-    (mark-whole-buffer)
-    (ies-redisplay-text-with-tags-emphasized)))))
+    (ies-ghost-mode)))))
 
-;; (setq enriched-translations
-;;  '((x-nlu-name
-;;     (t "x-nlu-name"))
-;;    (x-nlu-description
-;;     (t "x-nlu-description"))
-;;    (face
-;;     (bold-italic "bold" "italic")
-;;     (bold "bold")
-;;     (italic "italic")
-;;     (underline "underline")
-;;     (fixed "fixed")
-;;     (excerpt "excerpt")
-;;     (default)
-;;     (nil enriched-encode-other-face))
-;;    (left-margin
-;;     (4 "indent"))
-;;    (right-margin
-;;     (4 "indentright"))
-;;    (justification
-;;     (none "nofill")
-;;     (right "flushright")
-;;     (left "flushleft")
-;;     (full "flushboth")
-;;     (center "center"))
-;;    (PARAMETER
-;;     (t "param"))
-;;    (read-only
-;;     (t "x-read-only"))
-;;    (unknown
-;;     (nil format-annotate-value)))
-;;  )
+(defun ies-open-ghosted-html-as-w3m ()
+ ""
+ (interactive)
+ (assert
+  (kmax-mode-is-derived-from 'ies-ghost-mode))
+ (let ((contents (kmax-buffer-contents))
+       (new-buffer-name (concat "Temporary HTML for " (buffer-name (current-buffer)) ".html")))
+  (pop-to-buffer (get-buffer-create new-buffer-name))
+  (insert contents)
+  (write-file (concat "/tmp/" new-buffer-name))
+  (html-mode)
+  (kmax-view-current-html-file)))
 
-;; (defun format-annotate-region (from to translations format-fn ignore)
-;;   "Generate annotations for text properties in the region.
-;; Search for changes between FROM and TO, and describe them with a list of
-;; annotations as defined by alist TRANSLATIONS and FORMAT-FN.  IGNORE lists text
-;; properties not to consider; any text properties that are neither ignored nor
-;; listed in TRANSLATIONS are warned about.
-;; If you actually want to modify the region, give the return value of this
-;; function to `format-insert-annotations'.
+(defun ies-train-region ()
+ ""
+ (interactive)
+ (let ((contents (buffer-substring (point) (mark))))
+  (ffap "/var/lib/myfrdcsa/codebases/minor/ies/data-git/train.txt")
+  (kmax-clear-buffer)
+  (setq-local use-hard-newlines nil)
+  (enriched-mode t)
+  (insert contents)
+  (save-buffer))
+ (shell-command "cd /var/lib/myfrdcsa/codebases/minor/ies/scripts2/ && ./train.sh"))
 
-;; Format of the TRANSLATIONS argument:
-
-;; Each element is a list whose car is a PROPERTY, and the following
-;; elements have the form (VALUE ANNOTATIONS...).
-;; Whenever the property takes on the value VALUE, the annotations
-;; \(as formatted by FORMAT-FN) are inserted into the file.
-;; When the property stops having that value, the matching negated annotation
-;; will be inserted \(it may actually be closed earlier and reopened, if
-;; necessary, to keep proper nesting).
-
-;; If VALUE is a list, then each element of the list is dealt with
-;; separately.
-
-;; If a VALUE is numeric, then it is assumed that there is a single annotation
-;; and each occurrence of it increments the value of the property by that number.
-;; Thus, given the entry \(left-margin \(4 \"indent\")), if the left margin
-;; changes from 4 to 12, two <indent> annotations will be generated.
-
-;; If the VALUE is nil, then instead of annotations, a function should be
-;; specified.  This function is used as a default: it is called for all
-;; transitions not explicitly listed in the table.  The function is called with
-;; two arguments, the OLD and NEW values of the property.  It should return
-;; a cons cell (CLOSE . OPEN) as `format-annotate-single-property-change' does.
-
-;; The same TRANSLATIONS structure can be used in reverse for reading files."
-;;   (let ((all-ans nil)    ; All annotations - becomes return value
-;; 	(open-ans nil)   ; Annotations not yet closed
-;; 	(loc nil)	 ; Current location
-;; 	(not-found nil)) ; Properties that couldn't be saved
-;;     (while (or (null loc)
-;; 	       (and (setq loc (next-property-change loc nil to))
-;; 		    (< loc to)))
-;;       (or loc (setq loc from))
-;;       (let* ((ans (format-annotate-location loc (= loc from) ignore translations))
-;; 	     (neg-ans (format-reorder (aref ans 0) open-ans))
-;; 	     (pos-ans (aref ans 1))
-;; 	     (ignored (aref ans 2)))
-;; 	(setq not-found (append ignored not-found)
-;; 	      ignore    (append ignored ignore))
-;; 	;; First do the negative (closing) annotations
-;; 	(while neg-ans
-;; 	  ;; Check if it's missing.  This can happen (eg, a numeric property
-;; 	  ;; going negative can generate closing annotations before there are
-;; 	  ;; any open).  Warn user & ignore.
-;; 	  (if (not (member (car neg-ans) open-ans))
-;; 	      (message "Can't close %s: not open." (car neg-ans))
-;; 	    (while (not (equal (car neg-ans) (car open-ans)))
-;; 	      ;; To close anno. N, need to first close ans 1 to N-1,
-;; 	      ;; remembering to re-open them later.
-;; 	      (push (car open-ans) pos-ans)
-;; 	      (setq all-ans
-;; 		    (cons (cons loc (funcall format-fn (car open-ans) nil))
-;; 			  all-ans))
-;; 	      (setq open-ans (cdr open-ans)))
-;; 	    ;; Now remove the one we're really interested in from open list.
-;; 	    (setq open-ans (cdr open-ans))
-;; 	    ;; And put the closing annotation here.
-;; 	    (push (cons loc (funcall format-fn (car neg-ans) nil))
-;; 		  all-ans))
-;; 	  (setq neg-ans (cdr neg-ans)))
-;; 	;; Now deal with positive (opening) annotations
-;;         (while pos-ans
-;;           (push (car pos-ans) open-ans)
-;;           (push (cons loc (funcall format-fn (car pos-ans) t))
-;;                 all-ans)
-;;           (setq pos-ans (cdr pos-ans)))))
-
-;;     ;; Close any annotations still open
-;;     (while open-ans
-;;       (setq all-ans
-;; 	    (cons (cons to (funcall format-fn (car open-ans) nil))
-;; 		  all-ans))
-;;       (setq open-ans (cdr open-ans)))
-;;     (if not-found
-;; 	(message "These text properties could not be saved:\n    %s"
-;; 		 not-found))
-;;     (nreverse all-ans)))
+(defun ies-classify-region ()
+ ""
+ (interactive)
+ (let ((contents (buffer-substring (point) (mark))))
+  (ffap "/var/lib/myfrdcsa/codebases/minor/ies/data-git/classify.txt")
+  (kmax-clear-buffer)
+  (setq-local use-hard-newlines nil)
+  (enriched-mode t)
+  (insert contents)
+  (save-buffer))
+ (shell-command "cd /var/lib/myfrdcsa/codebases/minor/ies/scripts2/ && ./classify.sh"))
