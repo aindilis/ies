@@ -11,8 +11,9 @@ learners soon.</x-nlu-description>  It is available at
 <x-nlu-url>https://github.com/aindilis/ies</x-nlu-url>.
 ```
 
-Assuming everything is working, different tags will be highlighted 
-with different colors.
+Assuming everything is working, different tagged text will be 
+highlighted  with different colors (although you won't actually see 
+the x-nlu-... tags, unless you find-file-literally).
 
 One can then select some annotated text in a region, and enter "ct" 
 to generate a model from it.  Then highlight another text region to 
