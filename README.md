@@ -6,7 +6,8 @@ save them in enriched-mode.  Text will get xml-tags like:
 
 ```
 This system, <x-nlu-name>IES</x-nlu-name>, <x-nlu-description>allows 
-one to label text and extract it using MALLET and hopefully other 
+one to label some text, and then train a model and automatically 
+label more text and extract it using MALLET and hopefully other 
 learners soon.</x-nlu-description>  It is available at 
 <x-nlu-url>https://github.com/aindilis/ies</x-nlu-url>.
 ```
