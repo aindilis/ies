@@ -1,182 +1,482 @@
-div none
-class none
-view none
-content none
-h3 none
-Software none
-h3 none
-div none
-class none
-views none
-row none
-views none
-row none
-1 none
-views none
-row none
-odd none
-views none
-row none
-first none
-span none
-class none
-views none
-field none
-views none
-field none
-title none
-span none
-class none
-field none
-content none
-a none
-href none
-technologies x-nlu-url
-edits x-nlu-url
-Edits x-nlu-name
-a none
-span none
-span none
-span none
-class none
-views none
-field none
-views none
-field none
-body none
-span none
-class none
-field none
-content none
-p none
-A x-nlu-description
+P none
+A none
+NAME none
+ACL2 none
+A none
+P none
+DT none
+B none
+ACL2 x-color x-nlu-name
+B none
+DD none
+P none
+UL none
+LI none
+Web none
+site none
+A none
+HREF none
+http x-color x-nlu-url
+www x-color x-nlu-url
+cliki x-color x-nlu-url
+net x-color x-nlu-url
+ACL2 x-color x-nlu-url
+www none
+cliki none
+net none
+ACL2 none
+A none
+LI none
+UL none
+P none
+P x-nlu-description
+ACL2 x-color x-nlu-description
+A x-color x-nlu-description
+Computational x-color x-nlu-description
+Logic x-color x-nlu-description
+for x-color x-nlu-description
+Applicative x-color x-nlu-description
+Common x-color x-nlu-description
+Lisp x-color x-nlu-description
+is x-color x-nlu-description
+a x-color x-nlu-description
+theorem x-color x-nlu-description
+prover x-color x-nlu-description
+for x-color x-nlu-description
+industrial x-color x-nlu-description
+applications x-color x-nlu-description
+It x-color x-nlu-description
+is x-color x-nlu-description
+both x-color x-nlu-description
+a x-color x-nlu-description
+mathematical x-color x-nlu-description
+logic x-color x-nlu-description
+and x-color x-nlu-description
+a x-color x-nlu-description
+system x-color x-nlu-description
+of x-color x-nlu-description
+tools x-color x-nlu-description
+for x-color x-nlu-description
+constructing x-color x-nlu-description
+proofs x-color x-nlu-description
+in x-color x-nlu-description
+the x-color x-nlu-description
+logic x-color x-nlu-description
+ACL2 x-color x-nlu-description
+works x-color x-nlu-description
+with x-color x-nlu-description
+GCL x-color x-nlu-description
+GNU x-color x-nlu-description
+Common x-color x-nlu-description
+Lisp x-color x-nlu-description
+P none
+P none
+A none
+NAME none
+AI none
+Kernel none
+A none
+P none
+DT none
+B none
+AI x-color x-nlu-name
+Kernel x-color x-nlu-name
+B none
+DD none
+P none
+UL none
+LI none
+Web none
+site none
+A none
+HREF none
+http x-color x-nlu-url
+aikernel x-color x-nlu-url
+sourceforge x-color x-nlu-url
+net x-color x-nlu-url
+aikernel none
+sourceforge none
+net none
+A none
+LI none
+LI none
+Sourceforge none
+site none
+A none
+HREF none
+http x-color x-nlu-url
+sourceforge x-color x-nlu-url
+net x-color x-nlu-url
+projects x-color x-nlu-url
+aikernel x-color x-nlu-url
+sourceforge none
+net none
+projects none
+aikernel none
+A none
+LI none
+UL none
+P none
+P x-nlu-description
+The x-color x-nlu-description
+AI x-color x-nlu-description
+Kernel x-color x-nlu-description
+is x-color x-nlu-description
+a x-color x-nlu-description
+re x-color x-nlu-description
+usable x-color x-nlu-description
+artificial x-color x-nlu-description
+intelligence x-color x-nlu-description
+engine x-color x-nlu-description
+that x-color x-nlu-description
+uses x-color x-nlu-description
+natural x-color x-nlu-description
+language x-color x-nlu-description
+processing x-color x-nlu-description
+and x-color x-nlu-description
+an x-color x-nlu-description
+Activator x-color x-nlu-description
+Context x-color x-nlu-description
+model x-color x-nlu-description
+to x-color x-nlu-description
+allow x-color x-nlu-description
+multi x-color x-nlu-description
+tasking x-color x-nlu-description
+between x-color x-nlu-description
+installed x-color x-nlu-description
+cells x-color x-nlu-description
+P none
+P none
+A none
+NAME none
+AI none
+Search none
+II none
+A none
+P none
+DT none
+B none
+AI x-color x-nlu-name
+Search x-color x-nlu-name
+II x-color x-nlu-name
+B none
+DD none
+P none
+UL none
+LI none
+WEB none
+site none
+A none
+HREF none
+http x-color x-nlu-url
+www x-color x-nlu-url
+neiu x-color x-nlu-url
+edu x-color x-nlu-url
+kwtracy x-color x-nlu-url
+ooai x-color x-nlu-url
+book x-color x-nlu-url
+http x-color
+www x-color
+neiu x-color
+edu x-color
+kwtracy x-color
+ooai x-color
+book x-color
+A none
+LI none
+UL none
+P none
+P x-nlu-description
+Basically x-color x-nlu-description
+the x-color x-nlu-description
+library x-color x-nlu-description
+offers x-color x-nlu-description
+the x-color x-nlu-description
+programmer x-color x-nlu-description
+a x-color x-nlu-description
+set x-color x-nlu-description
+of x-color x-nlu-description
+search x-color x-nlu-description
+algorithms x-color x-nlu-description
+that x-color x-nlu-description
+may x-color x-nlu-description
+be x-color x-nlu-description
+used x-color x-nlu-description
+to x-color x-nlu-description
+solve x-color x-nlu-description
+all x-color x-nlu-description
+kind x-color x-nlu-description
+of x-color x-nlu-description
+different x-color x-nlu-description
+problems x-color x-nlu-description
+The x-color x-nlu-description
+idea x-color x-nlu-description
+is x-color x-nlu-description
+that x-color x-nlu-description
+when x-color x-nlu-description
+developing x-color x-nlu-description
+problem x-color x-nlu-description
+solving x-color x-nlu-description
+software x-color x-nlu-description
+the x-color x-nlu-description
+programmer x-color x-nlu-description
+should x-color x-nlu-description
+be x-color x-nlu-description
+able x-color x-nlu-description
+to x-color x-nlu-description
+concentrate x-color x-nlu-description
+on x-color x-nlu-description
+the x-color x-nlu-description
+representation x-color x-nlu-description
+of x-color x-nlu-description
+the x-color x-nlu-description
+problem x-color x-nlu-description
+to x-color x-nlu-description
+be x-color x-nlu-description
+solved x-color x-nlu-description
+and x-color x-nlu-description
+should x-color x-nlu-description
+not x-color x-nlu-description
+need x-color x-nlu-description
+to x-color x-nlu-description
+bother x-color x-nlu-description
+with x-color x-nlu-description
+the x-color x-nlu-description
+implementation x-color x-nlu-description
+of x-color x-nlu-description
+the x-color x-nlu-description
+search x-color x-nlu-description
+algorithm x-color x-nlu-description
+that x-color x-nlu-description
+will x-color x-nlu-description
+be x-color x-nlu-description
+used x-color x-nlu-description
+to x-color x-nlu-description
+actually x-color x-nlu-description
+conduct x-color x-nlu-description
+the x-color x-nlu-description
+search x-color x-nlu-description
+This x-color x-nlu-description
+idea x-color x-nlu-description
+has x-color x-nlu-description
+been x-color x-nlu-description
+realized x-color x-nlu-description
+by x-color x-nlu-description
+the x-color x-nlu-description
+implementation x-color x-nlu-description
+of x-color x-nlu-description
+a x-color x-nlu-description
+set x-color x-nlu-description
+of x-color x-nlu-description
+search x-color x-nlu-description
+classes x-color x-nlu-description
+that x-color x-nlu-description
+may x-color x-nlu-description
+be x-color x-nlu-description
+incorporated x-color x-nlu-description
+in x-color x-nlu-description
+other x-color x-nlu-description
+software x-color x-nlu-description
+through x-color x-nlu-description
+B x-color x-nlu-description
+C x-color x-nlu-description
+B x-color x-nlu-description
+s x-color x-nlu-description
+features x-color x-nlu-description
+of x-color x-nlu-description
+derivation x-color x-nlu-description
+and x-color x-nlu-description
+inheritance x-color x-nlu-description
+The x-color x-nlu-description
+following x-color x-nlu-description
+search x-color x-nlu-description
+algorithms x-color x-nlu-description
+have x-color x-nlu-description
+been x-color x-nlu-description
+implemented x-color x-nlu-description
+P x-color x-nlu-description
+P x-color x-nlu-description
+UL x-color x-nlu-description
+LI x-color x-nlu-description
+depth x-color x-nlu-description
+first x-color x-nlu-description
+tree x-color x-nlu-description
+and x-color x-nlu-description
+graph x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+breadth x-color x-nlu-description
+first x-color x-nlu-description
+tree x-color x-nlu-description
+and x-color x-nlu-description
+graph x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+uniform x-color x-nlu-description
+cost x-color x-nlu-description
+tree x-color x-nlu-description
+and x-color x-nlu-description
+graph x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+best x-color x-nlu-description
+first x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+bidirectional x-color x-nlu-description
+depth x-color x-nlu-description
+first x-color x-nlu-description
+tree x-color x-nlu-description
+and x-color x-nlu-description
+graph x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+bidirectional x-color x-nlu-description
+breadth x-color x-nlu-description
+first x-color x-nlu-description
+tree x-color x-nlu-description
+and x-color x-nlu-description
+graph x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+AND x-color x-nlu-description
+OR x-color x-nlu-description
+depth x-color x-nlu-description
+tree x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+LI x-color x-nlu-description
+AND x-color x-nlu-description
+OR x-color x-nlu-description
+breadth x-color x-nlu-description
+tree x-color x-nlu-description
+search x-color x-nlu-description
+LI x-color x-nlu-description
+UL x-color x-nlu-description
+P x-color x-nlu-description
+P x-color x-nlu-description
+This x-color x-nlu-description
+library x-color x-nlu-description
+has x-color x-nlu-description
+a x-color x-nlu-description
+corresponding x-color x-nlu-description
+book x-color x-nlu-description
+A x-color x-nlu-description
+HREF x-color x-nlu-description
+http x-color x-nlu-description
+www x-color x-nlu-description
+neiu x-color x-nlu-description
+edu x-color x-nlu-description
+kwtracy x-color x-nlu-description
+ooai x-color x-nlu-description
+book x-color x-nlu-description
+Object x-color x-nlu-description
+Oriented x-color x-nlu-description
+Artificial x-color x-nlu-description
+Intelligence x-color x-nlu-description
+Using x-color x-nlu-description
+C x-color x-nlu-description
+A x-color x-nlu-description
+P none
+P none
+A none
+NAME none
+Alchemy none
+A none
+P none
+DT none
+B none
+Alchemy x-nlu-name
+B none
+DD none
+P none
+UL none
+LI none
+Web none
+site none
+A none
+HREF none
+http x-nlu-url
+alchemy x-nlu-url
+cs x-nlu-url
+washington x-nlu-url
+edu x-nlu-url
+http none
+alchemy none
+cs none
+washington none
+edu none
+A none
+LI none
+UL none
+P none
+P x-nlu-description
+Alchemy x-nlu-description
+is x-nlu-description
+a x-nlu-description
 software x-nlu-description
 package x-nlu-description
-aimed x-nlu-description
-at x-nlu-description
-recognizing x-nlu-description
-entailment x-nlu-description
-relations x-nlu-description
-between x-nlu-description
-two x-nlu-description
-portions x-nlu-description
+providing x-nlu-description
+a x-nlu-description
+series x-nlu-description
 of x-nlu-description
-text x-nlu-description
-p none
-span none
-span none
-div none
-div none
-class none
-views none
-row none
-views none
-row none
-2 none
-views none
-row none
-even none
-span none
-class none
-views none
-field none
-views none
-field none
-title none
-span none
-class none
-field none
-content none
-a none
-href none
-technologies x-nlu-url
-textpro x-nlu-url
-TextPro x-nlu-name
-a none
-span none
-span none
-span none
-class none
-views none
-field none
-views none
-field none
-body none
-span none
-class none
-field none
-content none
-p none
-A x-nlu-description
-suite x-nlu-description
-of x-nlu-description
-modular x-nlu-description
-Natural x-nlu-description
-Language x-nlu-description
-Processing x-nlu-description
-NLP x-nlu-description
-tools x-nlu-description
+algorithms x-nlu-description
 for x-nlu-description
-analysis x-nlu-description
-of x-nlu-description
-Italian x-nlu-description
+statistical x-nlu-description
+relational x-nlu-description
+learning x-nlu-description
 and x-nlu-description
-English x-nlu-description
-texts x-nlu-description
-p none
-span none
-span none
-div none
-div none
-class none
-views none
-row none
-views none
-row none
-3 none
-views none
-row none
-odd none
-span none
-class none
-views none
-field none
-views none
-field none
-title none
-span none
-class none
-field none
-content none
-a none
-href none
-technologies x-nlu-url
-jsre x-nlu-url
-jSRE x-nlu-name
-a none
-span none
-span none
-span none
-class none
-views none
-field none
-views none
-field none
-body none
-span none
-class none
-field none
-content none
-p none
-An x-nlu-description
-open x-nlu-description
-source x-nlu-description
-Java x-nlu-description
-tool x-nlu-description
-for x-nlu-description
-Relation x-nlu-description
-Extraction x-nlu-description
-p none
-span none
-span none
-div none
+probabilistic x-nlu-description
+logic x-nlu-description
+inference x-nlu-description
+based x-nlu-description
+on x-nlu-description
+the x-nlu-description
+Markov x-nlu-description
+logic x-nlu-description
+representation x-nlu-description
+Alchemy x-nlu-description
+allows x-nlu-description
+you x-nlu-description
+to x-nlu-description
+easily x-nlu-description
+develop x-nlu-description
+a x-nlu-description
+wide x-nlu-description
+range x-nlu-description
+of x-nlu-description
+AI x-nlu-description
+applications x-nlu-description
+including x-nlu-description
+P x-nlu-description
+P x-nlu-description
+UL x-nlu-description
+LI x-nlu-description
+Collective x-nlu-description
+classification x-nlu-description
+LI x-nlu-description
+LI x-nlu-description
+Link x-nlu-description
+prediction x-nlu-description
+LI x-nlu-description
+LI x-nlu-description
+Entity x-nlu-description
+resolution x-nlu-description
+LI x-nlu-description
+LI x-nlu-description
+Social x-nlu-description
+network x-nlu-description
+modeling x-nlu-description
+LI x-nlu-description
+LI x-nlu-description
+Information x-nlu-description
+extraction x-nlu-description
+LI x-nlu-description
+UL x-nlu-description
+P x-nlu-description

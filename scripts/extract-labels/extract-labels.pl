@@ -7,9 +7,6 @@ use Rival::String::Tokenizer;
 $specification = q(
 	-f <file>	File
 
-	--train		Create to-train data
-	--classify	Create to-classify data
-
 	-t <tokenizer>	Tokenizer
 );
 
@@ -19,9 +16,6 @@ my $config =
 my $conf = $config->CLIConfig;
 # $UNIVERSAL::systemdir = "/var/lib/myfrdcsa/codebases/minor/system";
 
-if (! (exists $conf->{'--train'} or exists $conf->{'--classify'})) {
-  die "Need to specify at least one of --train or --classify\n";
-}
 die "need to specify a valid file with -f\n" unless exists $conf->{'-f'} and -f $conf->{'-f'};
 
 my $text = read_file($conf->{'-f'});
@@ -33,6 +27,8 @@ my $tokenizer = Rival::String::Tokenizer->new();
 my @lines = split /\n/, $text;
 my @dropped = splice(@lines,3,-1);
 my $truncatedtext = join("\n", @dropped);
+
+my @results;
 
 my @final;
 my @sequence;
@@ -55,13 +51,14 @@ while (@chars) {
       push @sequence, '<';
       push @totokenize, '<';
     } elsif ($c eq '>') {
-      ProcessToTokenize(\@totokenize);
+      # ProcessToTokenize(\@totokenize);
       $state = 0;
       my $tag = join('',@queue);
       if ($tag =~ /^\/(.*?)$/) {
+	push @results, [$1,join('',@{$currenttags->{$1}})];
 	delete $currenttags->{$1};
       } else {
-	$currenttags->{$tag} = 1;
+	$currenttags->{$tag} = [];
       }
       push @sequence, '<<<'.$tag.'>>>';
       @queue = ();
@@ -69,8 +66,23 @@ while (@chars) {
       push @queue, $c;
     }
   }
+  foreach my $tag (keys %$currenttags) {
+    push @{$currenttags->{$tag}}, $c;
+  }
 }
-ProcessToTokenize(\@totokenize);
+foreach my $result (@results) {
+  $result->[1] =~ s/^>//s;
+  my $tag = $result->[0];
+  $result->[1] =~ s/<\/$tag$//s;
+  $result->[0] =~ s/^x-nlu-//;
+}
+# print Dumper(\@results);
+foreach my $result (@results) {
+  print $result->[0].': '.$result->[1]."\n";
+}
+
+# ProcessToTokenize(\@totokenize);
+
 
 sub ProcessToTokenize {
   my $totokenize = shift @_;
@@ -97,6 +109,6 @@ sub ProcessToTokenize {
   }
 }
 
-foreach my $entry (@final) {
-  print join(' ', @$entry)."\n";
-}
+# foreach my $entry (@final) {
+#   print join(' ', @$entry)."\n";
+# }

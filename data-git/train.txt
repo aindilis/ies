@@ -1,12 +1,88 @@
 Content-Type: text/enriched
 Text-Width: 70
 
-<<li><<a href="<x-nlu-url>http://www.suggestgrid.com/</x-nlu-url>" rel="nofollow"><x-nlu-name>SuggestGrid</x-nlu-name><</a> <x-nlu-description>which is the successor of <<a href="https://devcenter.heroku.com/articles/rcmmndr" rel="nofollow">Rcmmndr<</a>. SuggestGrid is a generic recommendation system. It is based on <<strong>Apache Spark<</strong> but has many improvements over it.</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://www.peerius.com/</x-nlu-url>" rel="nofollow"><x-nlu-name>Peerius</x-nlu-name><</a><x-nlu-description> closed, product and e-commerce focused for live and email recommendations. Active and seems very interesting, although little information about the actual product and how it works is available.</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://recommender.strands.com</x-nlu-url>/" rel="nofollow"><x-nlu-name>Strands</x-nlu-name><</a> <x-nlu-description>is a closed, product and e-commerce focused system. I think it works by including tracking scripts (a la Google Analytics) on the website, and recommendations widgets. What I really like about Strands is their publishing of case-studies e.g. <<a href="http://retail.strands.com/customers/wireless-emporium-case-study/" rel="nofollow">Wireless Emporium<</a> and white papers like <<a href="http://www.aaai.org/ojs/index.php/aimagazine/article/viewFile/2360/2232" rel="nofollow">The Big promise of recommender systems<</a>. Although these do not discuss the exact solutions provided, they give a good overview of their vision and goals of providing recommendations.</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://www.sli-systems.com/</x-nlu-url>" rel="nofollow"><x-nlu-name>SLI Systems Recommender</x-nlu-name><</a> <x-nlu-description>A closed recommender system focused on e-commerce, search and mobile.</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>https://cloud.google.com/prediction/docs</x-nlu-url>" rel="nofollow"><x-nlu-name>Google Cloud Prediction API</x-nlu-name><</a><x-nlu-description> Googles offering of cloud computed prediction API</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://googlecloudplatform.blogspot.co.nz/2014/01/performance-advantages-of-the-new-google-cloud-storage-connector-for-hadoop.html</x-nlu-url>" rel="nofollow"><x-nlu-name>Using Hadoop on Google Cloud</x-nlu-name><</a> <x-nlu-description>an example use of Google cloud with benchmarks from recommender system.</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://www.paralleldots.com/</x-nlu-url>" rel="nofollow"><x-nlu-name>ParallelDots</x-nlu-name><</a> <x-nlu-description>tool to relate published content</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://aws.amazon.com/machine-learning/</x-nlu-url>" rel="nofollow"><x-nlu-name>Amazon Machine Learning</x-nlu-name><</a> <x-nlu-description>machine learning platform to model data and create predictions</x-nlu-description><</li>
-<<li><<a href="<x-nlu-url>http://azure.microsoft.com/en-us/services/machine-learning/</x-nlu-url>" rel="nofollow"><x-nlu-name>Azure ML</x-nlu-name><</a> <x-nlu-description>machine learning platform to model data and create predictions</x-nlu-description><</li>
+<<P>
+<<A NAME="ACL2"><</A> <</P>
+<<DT><<B><x-nlu-name><x-color><x-nlu-name>ACL2</x-nlu-name></x-color></x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url><x-color><x-nlu-url>http://www.cliki.net/ACL2</x-nlu-url></x-color></x-nlu-url>">www.cliki.net/ACL2<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P><x-nlu-description><x-color>ACL2 (A Computational Logic for Applicative Common Lisp) is a theorem
+prover for industrial applications. It is both a mathematical logic and
+a system of tools for constructing proofs in the logic.  ACL2 works
+with GCL (GNU Common Lisp).</x-color></x-nlu-description><</P></x-nlu-description>
+
+<<P>
+<<A NAME="AI Kernel"><</A> <</P>
+<<DT><<B><x-nlu-name><x-color><x-nlu-name>AI Kernel</x-nlu-name></x-color></x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url><x-color><x-nlu-url>http://aikernel.sourceforge.net/</x-nlu-url></x-color></x-nlu-url>">aikernel.sourceforge.net<</A><</LI>
+<<LI>Sourceforge site: 
+<<A HREF="<x-nlu-url><x-color><x-nlu-url>http://sourceforge.net/projects/aikernel/</x-nlu-url></x-color></x-nlu-url>">sourceforge.net/projects/aikernel/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P><x-nlu-description><x-color>The AI Kernel is a re-usable artificial intelligence engine that uses
+natural language processing and an Activator / Context model to allow
+multi tasking between installed cells.</x-color></x-nlu-description><</P></x-nlu-description>
+
+<<P>
+<<A NAME="AI Search II"><</A>  <</P>
+<<DT><<B><x-nlu-name><x-color><x-nlu-name>AI Search II</x-nlu-name></x-color></x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>WEB site: 
+<<A HREF="<x-nlu-url><x-color><x-nlu-url>http://www.neiu.edu/~kwtracy/ooai-book/</x-nlu-url>">http://www.neiu.edu/~kwtracy/ooai-book/</x-color></x-nlu-url><</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P><x-nlu-description><x-color>Basically, the library offers the programmer a set of search
+algorithms that may be used to solve all kind of different
+problems. The idea is that when developing problem solving software
+the programmer should be able to concentrate on the representation of
+the problem to be solved and should not need to bother with the
+implementation of the search algorithm that will be used to actually
+conduct the search. This idea has been realized by the implementation
+of a set of search classes that may be incorporated in other software
+through <<B>C++<</B>'s features of derivation and inheritance.  The
+following search algorithms have been implemented:<</P>
+
+<<P>
+<<UL>
+<<LI>depth-first tree and graph search.<</LI>
+<<LI>breadth-first tree and graph search.<</LI>
+<<LI>uniform-cost tree and graph search.<</LI>
+<<LI>best-first search.<</LI>
+<<LI>bidirectional depth-first tree and graph search.<</LI>
+<<LI>bidirectional breadth-first tree and graph search.<</LI>
+<<LI>AND/OR depth tree search.<</LI>
+<<LI>AND/OR breadth tree search.<</LI>
+<</UL>
+<</P>
+
+<<P>This library has a corresponding book, "
+<<A HREF="http://www.neiu.edu/~kwtracy/ooai-book/">Object-Oriented Artificial Intelligence, Using C++<</A>".</x-color></x-nlu-description><</P></x-nlu-description>
+
+<<P>
+<<A NAME="Alchemy"><</A> <</P>
+<<DT><<B><x-nlu-name>Alchemy</x-nlu-name><</B><<DD><<P>
+<<UL>
+<<LI>Web site: 
+<<A HREF="<x-nlu-url>http://alchemy.cs.washington.edu/</x-nlu-url>">http://alchemy.cs.washington.edu/<</A><</LI>
+<</UL>
+<</P>
+<x-nlu-description><<P>Alchemy is a software package providing a series of algorithms for
+statistical relational learning and probabilistic logic inference,
+based on the Markov logic representation. Alchemy allows you to easily
+develop a wide range of AI applications, including:<</P>
+<<P>
+<<UL>
+<<LI>Collective classification<</LI>
+<<LI>Link prediction<</LI>
+<<LI>Entity resolution<</LI>
+<<LI>Social network modeling<</LI>
+<<LI>Information extraction<</LI>
+<</UL>
+<</P></x-nlu-description>
+
+<<P>

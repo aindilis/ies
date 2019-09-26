@@ -9,6 +9,8 @@ $specification = q(
 
 	--train		Create to-train data
 	--classify	Create to-classify data
+
+	-t <tokenizer>	Tokenizer
 );
 
 my $config =
@@ -72,7 +74,12 @@ ProcessToTokenize(\@totokenize);
 
 sub ProcessToTokenize {
   my $totokenize = shift @_;
-  $tokenizer->tokenize(join('',@$totokenize),Tokenizer => 'textmine');
+  my @args;
+  if ($conf->{'-t'}) {
+    push @args, 'Tokenizer';
+    push @args, $conf->{'-t'};
+  }
+  $tokenizer->tokenize(join('',@$totokenize),@args);
   my @tokens = $tokenizer->getTokens();
   @totokenize = ();
   my @tags = sort keys %$currenttags;

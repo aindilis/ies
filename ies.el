@@ -7,20 +7,20 @@
 (global-set-key "\C-cies" 'ies-ghost-buffer)
 (global-set-key "\C-cieg" 'ies-ghost-mode)
 
-(define-derived-mode ies-mode
- nlu-mode "IES"
- "Major mode for asserting knowledge about text.
-\\{ies-mode-map}"
- (setq case-fold-search nil)
+;; (define-derived-mode ies-mode
+;;  nlu-mode "IES"
+;;  "Major mode for asserting knowledge about text.
+;; \\{ies-mode-map}"
+;;  (setq case-fold-search nil)
  
- (define-key ies-mode-map "ls" 'ies-load-label-scheme)
- (define-key ies-mode-map "lm" 'ies-load-model)
- (define-key ies-mode-map "lr" 'ies-label-region)
+;;  (define-key ies-mode-map "ls" 'ies-load-label-scheme)
+;;  (define-key ies-mode-map "lm" 'ies-load-model)
+;;  (define-key ies-mode-map "lr" 'ies-label-region)
 
- ;; (suppress-keymap nlu-mode-map)
+;;  ;; (suppress-keymap nlu-mode-map)
 
- ;; ensure buffer is ghosted
- )
+;;  ;; ensure buffer is ghosted
+;;  )
 
 (define-derived-mode ies-ghost-mode
  nlu-ghost-mode "IES-Ghost"
@@ -33,6 +33,9 @@
  (define-key ies-ghost-mode-map "ls" 'ies-load-label-scheme)
  (define-key ies-ghost-mode-map "lm" 'ies-load-model)
  (define-key ies-ghost-mode-map "lr" 'ies-label-region)
+ (define-key ies-ghost-mode-map "lt" 'ies-label-tap)
+ (define-key ies-ghost-mode-map "ld" 'ies-label-at-point-delete)
+ (define-key ies-ghost-mode-map "le" 'ies-labels-extract)
 
  (define-key ies-ghost-mode-map "ts" 'ies-ghost-save-with-properties-and-tags)
 
@@ -44,6 +47,7 @@
 
  (define-key ies-ghost-mode-map "rw" 'ies-open-ghosted-html-as-w3m)
 
+
  (setq-local use-hard-newlines nil)
  (enriched-mode t)
  (mark-whole-buffer)
@@ -51,12 +55,14 @@
  (set-mark (point))
  (ies-ghost-save-with-properties-and-tags)
  (nlu-read-only t)
+ (message "IES Ghost Mode loaded successfully apparently.")
  )
 
 (defun ies-ghost-buffer ()
  ""
  (interactive)
- (fundamental-mode)
+ (if (not (kmax-mode-is-derived-from 'doc-view-mode))
+  (fundamental-mode))
  (nlu-ghost-buffer)
  (ies-ghost-mode))
 
@@ -68,6 +74,9 @@
 
 (defvar ies-current-model nil)
 (defvar ies-current-model-directory nil)
+
+(defvar ies-current-tokenizer "textmine")
+;; (setq ies-current-tokenizer "default")
 
 (defun ies-load-label-scheme ()
  ""
@@ -120,6 +129,19 @@
    (ies-create-new-label-for-scheme label))
   (nlu-add-tag-to-region (read label))
   (ies-redisplay-text-with-tags-emphasized)))
+
+(defun ies-label-tap ()
+ ""
+ (interactive)
+ (let* ((labels (ies-labels))
+	(label (completing-read "Label: " (ies-guess-labels-for-region))))
+  (if (not (ies-label-belongs-to-scheme-p label ies-current-scheme))
+   (ies-create-new-label-for-scheme label))
+  (let* ((bounds (bounds-of-thing-at-point 'symbol))
+	 (point (car bounds))
+	 (mark (cdr bounds)))
+   (nlu-add-tag point mark (read label) t)
+   (ies-redisplay-text-with-tags-emphasized point mark))))
 
 ;; (ies-labels)
 
@@ -200,11 +222,13 @@
 
 ;; (prin1 (defined-colors))
 
-(defun ies-redisplay-text-with-tags-emphasized ()
+(defun ies-redisplay-text-with-tags-emphasized (&optional point-arg mark-arg)
  "Redraw the text, taking care to colorize and put on special fonts for each text item"
  (interactive)
- (let ((min (min (mark) (point)))
-       (max (max (mark) (point))))
+ (let* ((point (or point-arg (point)))
+	(mark (or mark-arg (mark)))
+	(min (min mark point))
+	(max (max mark point)))
   (save-excursion
    (goto-char min)
    (nlu-unlock-temporarily-and-execute
@@ -468,17 +492,67 @@ either strings, or lists of the form (PARAMETER VALUE)."
   (setq-local use-hard-newlines nil)
   (enriched-mode t)
   (insert contents)
-  (save-buffer))
- (shell-command "cd /var/lib/myfrdcsa/codebases/minor/ies/scripts2/ && ./train.sh"))
+  (save-buffer)
+  (kill-buffer))
+ (shell-command-to-string
+  (concat
+   "cd /var/lib/myfrdcsa/codebases/minor/ies/scripts/ && ./train.pl  -t "
+   (shell-quote-argument ies-current-tokenizer))))
 
 (defun ies-classify-region ()
  ""
  (interactive)
- (let ((contents (buffer-substring (point) (mark))))
-  (ffap "/var/lib/myfrdcsa/codebases/minor/ies/data-git/classify.txt")
-  (kmax-clear-buffer)
-  (setq-local use-hard-newlines nil)
-  (enriched-mode t)
+ (save-mark-and-excursion
+  (let ((contents (buffer-substring (point) (mark))))
+   (ffap "/var/lib/myfrdcsa/codebases/minor/ies/data-git/classify.txt")
+   (kmax-clear-buffer)
+   (setq-local use-hard-newlines nil)
+   (enriched-mode t)
+   (insert contents)
+   (save-buffer)
+   (kill-buffer)))
+ (shell-command-to-string
+  (concat
+   "cd /var/lib/myfrdcsa/codebases/minor/ies/scripts/ && ./classify.pl -t "
+   (shell-quote-argument ies-current-tokenizer)))
+ (nlu-read-only nil)
+ (kmax-replace-region
+  (kmax-file-contents-with-properties
+   "/var/lib/myfrdcsa/codebases/minor/ies/scripts/untokenize/labeled.txt"))
+ (ies-redisplay-text-with-tags-emphasized)
+ (nlu-read-only t)
+ )
+
+(defun ies-label-at-point-delete ()
+ ""
+ (interactive)
+ (let* ((point (point))
+	(mark (mark))
+	(tagname (nlu-get-tagname-at-point))
+	(beg (progn
+	      (nlu-back-to-beginning-of-tag tagname)
+	      (point)))
+	(end (progn
+	      (nlu-forward-to-ending-of-tag tagname)
+	      (point))))
+  (goto-char point)
+  (nlu-remove-tag-at-point)
+  (set-mark beg)
+  (goto-char end)
+  (erc-remove-text-properties-region beg end)
+  (ies-redisplay-text-with-tags-emphasized)
+  (set-mark mark)
+  (goto-char point)))
+
+(defun ies-labels-extract ()
+ ""
+ (interactive)
+ (let ((contents (shell-command-to-string
+		  (concat
+		   "/var/lib/myfrdcsa/codebases/minor/ies/scripts/extract-labels/extract-labels.pl -f "
+		   (shell-quote-argument buffer-file-name)))))
+  (kmax-edit-temp-buffer "*LABELS*")
   (insert contents)
-  (save-buffer))
- (shell-command "cd /var/lib/myfrdcsa/codebases/minor/ies/scripts2/ && ./classify.sh"))
+  (beginning-of-buffer)))
+ 
+

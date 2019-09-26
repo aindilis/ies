@@ -1,0 +1,219 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+
+  <<div class="views-row views-row-5 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jfex">jFex<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Java tool for Feature Extraction for Natural Language Processing applications<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-6 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/technologies/jinfil">jinFil<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>An open source Java tool for Instance Filtering<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-7 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/jexsli</x-nlu-url>">jExSLI</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>An open source java tool for language identification</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-8 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/jwebs</x-nlu-url>">jWebS</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A software tool for Web people search</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-9 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/jtcat</x-nlu-url>">jTCat</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A software tool for text categorization</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-10 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/jlsl</x-nlu-url>">jLSl</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>An open source Java tool for Latent Semantic Indexing</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-11 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/eop-platform">EOP</x-nlu-url> Platform</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>EXCITEMENT Open Platform<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-12 views-row-even views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/knowledgestore</x-nlu-url>">KnowledgeStore</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Scalable storage for text and RDF data</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<h3>Lexical resources<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/multiwordnet</x-nlu-url>">MultiWordNet</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A multilingual lexical database in which the Italian WordNet is strictly aligned with Princeton WordNet</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/wordnet-domains">WordNet</x-nlu-url> Domains</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A lexical resource created by augmenting WordNet with domain labels. It includes <<b>WordNet-Affect<</b</x-nlu-description>>.<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-3 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/sentiwords</x-nlu-url>">SentiWords</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A high coverage resource containing roughly 155.000 words associated with a sentiment score</x-nlu-description> <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-4 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/mapnet</x-nlu-url>">MapNet</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A FrameNet to WordNet Mapping</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-5 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/qall-me-ontology">QALL-ME</x-nlu-url> Ontology</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A domain-specific ontology for question answering in the domain of tourism</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-6 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/sensicon</x-nlu-url>">Sensicon</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A sensorial lexicon that associates English words with senses</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-7 views-row-odd views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/lico</x-nlu-url>">LICO</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A lexicon for Italian discourse connectives</x-nlu-description> <</p>
+<</span>  <</span>  <</div>
+  <<h3>Corpora<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href="/corps">CORPS<</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A corpus of political speeches tagged with specific audience reactions, such as applause or laughter</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/i-cab">I</x-nlu-url>-CAB</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>An annotated corpus consisting of 525 news stories taken from a local newspaper</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-3 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/evalita-ner2011-dataset">Evalita NER2011</x-nlu-url> Dataset</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>The Dataset of the Evalita 2011 Named Entity Recognition Task</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-4 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/cripco</x-nlu-url>">CRIPCO</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A corpus of Italian news stories annotated with information about person cross-document coreference</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-5 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/swiit</x-nlu-url>">SWiiT</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p>Italian Wikipedia annotated with entity mentions<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-6 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/multisemcor</x-nlu-url>">MultiSemCor</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>An English/Italian parallel corpus</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-7 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/t-pas">T</x-nlu-url>-PAS</x-nlu-name> <</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Typed Predicate Argument Structures for Italian</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-8 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/causal-timebank">Causal</x-nlu-url>-TimeBank</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>The TimeBank corpus taken from TempEval-3 task, annotated with causal information</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-9 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/qall-me-benchmark">QALL-ME</x-nlu-url> Benchmark</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Annotated spoken requests in the tourism domain (Italian, Spanish, English and German</x-nlu-description>)<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-10 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies</x-nlu-url>/textual-entailment-specialized-data-sets">Textual Entailment Specialized Data Sets</x-nlu-description><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>RTE-5 pairs annotated with linguistic phenomena and monothematic pairs</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-11 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/wikisents-framenet">Wikisents for</x-nlu-url> FrameNet</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Wikipedia sentences with frame labels in English and Italian</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-12 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/rte-3-ita">RTE-3</x-nlu-url>-Ita</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Italian version of the English RTE-3 dataset</x-nlu-description> <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-13 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/fact-ita-bank">Fact-Ita</x-nlu-url> Bank</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A subpart of Ita-TimeBank annotated with factuality information</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-14 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/acetowiki</x-nlu-url>">ACEtoWiki</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>An extension of the English ACE 2005 Corpus  with Ground-truth Links to Wikipedia</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-15 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies</x-nlu-url>/textual-entailment-graph-dataset">Textual Entailment Graph Dataset</x-nlu-description><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A gold standard dataset of entailment graphs for English and Italian</x-nlu-description> <</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-16 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies</x-nlu-url>/pilot-task-eventi-evalita-2014">Pilot Task of EVENTI @ Evalita 2014</x-nlu-description> <</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Test data set of the EVENTI Pilot Task on "Temporal Processing of Historical Texts</x-nlu-description>"<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-17 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/semeval2015-timeline-dataset"> SemEval2015 TimeLine</x-nlu-url> Dataset</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Dataset of the SemEval-2015 Task "TimeLine: Cross-Document Event Ordering</x-nlu-description>"<</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-18 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/newsreader-meantime-corpus">NewsReader MEANTIME</x-nlu-url> Corpus</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A semantically annotated corpus of 480 news articles in 4 languages</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-19 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies</x-nlu-url>/ne-annotated-tweets-al">NE-annotated-tweets-AL</x-nlu-description><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>Tweets annotated with Named Entities following the NEEL-IT guidelines</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-20 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies</x-nlu-url>/witac-newsreader-wikinews-italian-corpus">WItaC - NewsReader Wikinews Italian Corpus</x-nlu-description><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>The Italian section of the NewsReader MEANTIME corpus</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-21 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/contrast-ita-bank">Contrast-Ita</x-nlu-url> Bank</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A corpus annotated with discourse contrast relations in Italian</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-22 views-row-even">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/krauts</x-nlu-url>">KRAUTS</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A Temporally Annotated News Corpus in German</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-23 views-row-odd">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/dpd</x-nlu-url>">DPD</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A manually annotated Italian corpus of diary entries written by diabetic patients</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-24 views-row-even views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies</x-nlu-url>/cosmianu1.0">COSMIANU - Corpus Of Social Media Italian Annotated with Nominal Utterances</x-nlu-description><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A manually annotated corpus of around 66,000 tokens</x-nlu-description> <</p>
+<</span>  <</span>  <</div>
+  <<h3>Annotation Tools<</h3>
+  <<div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/cromer</x-nlu-url>">Cromer</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description> A Tool for Cross-Document Event and Entity Coreference</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/annotatorpro</x-nlu-url>">AnnotatorPro</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A tool for annotation of linguistic data</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+  <<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <<span class="views-field views-field-title">        <<span class="field-content"><<a href=<x-nlu-url>"/technologies/hlt-phonetic-scorer">HLT Phonetic</x-nlu-url> Scorer</x-nlu-name><</a><</span>  <</span>       -   
+  <<span class="views-field views-field-body">        <<span class="field-content"><<p><x-nlu-description>A utility to compute phonetic features of tokenized sentences</x-nlu-description><</p>
+<</span>  <</span>  <</div>
+    <</div>
+
