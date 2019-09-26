@@ -16,10 +16,15 @@ Assuming everything is working, different tagged text will be
 highlighted  with different colors (although you won't actually see 
 the x-nlu-... tags, unless you find-file-literally).
 
+Note this is not a standalone version - this one depends on FRDCSA.  
+A standalone version will probably be released eventually.
+
 One can then select some annotated text in a region, and enter "ct" 
 to generate a model from it.  Then highlight another text region to 
 be labeled, and run "cc" to label it.  At time time of writing, the
-untokenization step has not been completed.
+untokenization step has some bugs, but this version will replace the 
+unlabelled region with the automatically labeled text and highlight
+it.
 
 Note that there is a dependency on the NLU system 
 (https://github.com/aindilis/nlu) as well as on UniLang, but anyone 
@@ -35,3 +40,7 @@ and rough around the edges.  It probably depends on a lot of other
 FRDCSA software, most notably KMax (https://github.com/aindilis/kmax).
 One would benefit from knowing a lot about Emacs text properties in
 order to use this system until the interface gets cleaned up.
+
+This latest version introduced dependencies on BOSS::Config and 
+PerlLib::SwissArmyKnife which are in https://github.com/aindilis/boss 
+and https://github.com/aindilis/perllib respectively.
